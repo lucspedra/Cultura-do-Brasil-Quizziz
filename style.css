@@ -1,0 +1,184 @@
+:root {
+    --cor-fundo: #06140d;
+    --cor-principal: #0d2417;
+    --cor-secundaria: #183d27;
+    --cor-destaque: #39d98a;
+    --cor-destaque-hover: #65e6a5;
+    --cor-texto: #e5fff0;
+    --cor-texto-suave: #a8cdb7;
+    --cor-borda: rgba(57, 217, 138, 0.25);
+    --sombra: 0 12px 35px rgba(0, 0, 0, 0.35);
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    min-height: 100svh;
+    display: grid;
+    place-items: center;
+    padding: clamp(16px, 4vw, 48px);
+
+    background:
+        radial-gradient(
+            circle at top,
+            #103d25 0%,
+            var(--cor-fundo) 48%
+        ),
+        var(--cor-fundo);
+
+    color: var(--cor-texto);
+    font-family: Arial, Helvetica, sans-serif;
+    line-height: 1.6;
+}
+
+/* Caixa principal */
+.caixa-principal {
+    width: min(100%, 620px);
+    display: flex;
+    flex-direction: column;
+    align-items: stretch;
+    gap: clamp(18px, 3vw, 28px);
+
+    padding: clamp(24px, 5vw, 42px);
+    text-align: center;
+
+    background-color: rgba(13, 36, 23, 0.95);
+    border: 1px solid var(--cor-borda);
+    border-radius: clamp(16px, 3vw, 24px);
+    box-shadow: var(--sombra);
+    backdrop-filter: blur(8px);
+}
+
+/* Títulos */
+h1 {
+    color: var(--cor-destaque);
+    font-size: clamp(1.8rem, 6vw, 2.7rem);
+    line-height: 1.15;
+    text-wrap: balance;
+    text-shadow: 0 0 14px rgba(57, 217, 138, 0.3);
+}
+
+/* Textos */
+p {
+    max-width:  fifty;
+    margin: 0 auto;
+    text-align: justify !important;
+    color: var(--cor-texto-suave);
+    font-size: clamp(0.95rem, 2vw, 1.05rem);
+}
+
+/* Caso existam vários elementos agrupados */
+.caixa-principal > div,
+.grupo-botoes {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 12px;
+}
+
+/* Botões */
+button {
+    min-height: 48px;
+    padding: 13px 24px;
+
+    border: 1px solid transparent;
+    border-radius: 10px;
+
+    background-color: var(--cor-secundaria);
+    color: var(--cor-texto);
+
+    font: inherit;
+    font-weight: bold;
+    cursor: pointer;
+
+    transition:
+        background-color 0.3s ease,
+        color 0.3s ease,
+        transform 0.2s ease,
+        box-shadow 0.3s ease;
+}
+
+button:hover {
+    background-color: var(--cor-destaque);
+    color: #062012;
+    transform: translateY(-2px);
+    box-shadow: 0 8px 20px rgba(57, 217, 138, 0.3);
+}
+
+button:active {
+    transform: translateY(0);
+}
+
+button:focus-visible {
+    outline: 3px solid var(--cor-destaque-hover);
+    outline-offset: 4px;
+}
+
+/* Tablets e telas menores */
+@media (max-width: 600px) {
+    body {
+        align-items: start;
+        padding: 24px 16px;
+    }
+
+    .caixa-principal {
+        gap: 20px;
+    }
+
+    button {
+        flex: 1 1 180px;
+    }
+}
+
+/* Celulares */
+@media (max-width: 420px) {
+    body {
+        padding: 16px 12px;
+    }
+
+    .caixa-principal {
+        padding: 24px 18px;
+        gap: 18px;
+        border-radius: 16px;
+    }
+
+    h1 {
+        font-size: 1.8rem;
+    }
+
+    p {
+        font-size: 0.95rem;
+    }
+
+    .caixa-principal > div,
+    .grupo-botoes {
+        flex-direction: column;
+    }
+
+    button {
+        width: 100%;
+        flex: 1 1 auto;
+    }
+}
+
+/* Reduz animações para quem prefere menos movimento */
+@media (prefers-reduced-motion: reduce) {
+    html {
+        scroll-behavior: auto;
+    }
+
+    *,
+    *::before,
+    *::after {
+        transition-duration: 0.01ms !important;
+        animation-duration: 0.01ms !important;
+    }
+}
