@@ -6,75 +6,70 @@ const textoResultado = document.querySelector(".texto-resultado");
 
 const perguntas = [
     {
-        enunciado: "Assim que saiu da escola você se depara com uma nova tecnologia, um chat que consegue responder todas as dúvidas que uma pessoa pode ter, ele também gera imagens e áudios hiper-realistas. Qual o primeiro pensamento?",
+        enunciado: "Durante o Segundo Reinado, no governo de Dom Pedro II, o Brasil começou a apresentar algumas mudanças econômicas. Qual atividade continuava sendo a principal base da economia brasileira?",
         alternativas: [
             {
-                texto: "Isso é assustador!",
-                afirmacao: "afirmacao"
+                texto: "A exportação de produtos agrícolas, principalmente o café.",
+                afirmacao: "A economia brasileira continuava dependente da agricultura e das exportações."
             },
             {
-                texto: "Isso é maravilhoso!",
-                afirmacao: "afirmacao"
-            }           
-            
-        ]
-    },
-    {
-        enunciado: "Com a descoberta desta tecnologia, chamada Inteligência Artificial (IA), uma professora de tecnologia da escola decidiu fazer uma sequência de aulas sobre elaIA. No fim de uma aula ela pede que você escreva um trabalho sobre o uso de tecnologia em sala de aula. Qual atitude você toma?",
-        alternativas: [
-            {
-                texto:"Utilizar uma ferramenta de busca na internet que utiliza IA para que ela ajude a encontrar informações relevantes para o trabalho e explique numa linguagem que facilite o entendimento",
-                afirmacao:"afirmacao"
-            },
-            {
-                texto: "Escrever o trabalho com base nas conversas que teve com colegas, algumas pesquisas na internet e conhecimentos próprios sobre o tema.",
-                afirmacao:"afirmacao"
+                texto: "A produção industrial de máquinas e automóveis.",
+                afirmacao: "A indústria brasileira ainda era pequena e não produzia máquinas e automóveis em larga escala."
             }
         ]
     },
     {
-        enunciado: "Após a elaboração do trabalho, a professora realizou um debate entre a turma para entender como foi realizada a pesquisa e escrita. Nessa conversa também foi levantado um ponto muito importante: como a IA impacta o trabalho do futuro. Nesse debate, como você se posiciona?",
+        enunciado: "Em 1844, foi criada a Tarifa Alves Branco. Qual foi uma de suas consequências para a economia brasileira?",
         alternativas: [
             {
-                texto:"Me preocupo com as pessoas que perderão seus empregos para máquinas e defendem a importância de proteger os trabalhadores.",
-                afirmacao:"afirmacao"
+                texto: "O aumento dos impostos sobre produtos importados, favorecendo a indústria nacional.",
+                afirmacao: "A Tarifa Alves Branco tornou alguns produtos importados mais caros e estimulou a produção nacional."
             },
             {
-                texto:"Defende a ideia de que a IA pode criar novas oportunidades de emprego e melhorar habilidades humanas.",
-                afirmacao:"afirmacao"
+                texto: "A diminuição dos impostos sobre todos os produtos estrangeiros.",
+                afirmacao: "A redução dos impostos sobre importações não favoreceria diretamente as fábricas brasileiras."
             }
-            
         ]
     },
     {
-        enunciado: "Ao final da discussão, você precisou criar uma imagem no computador que representasse o que pensa sobre IA. E agora?",
+        enunciado: "Irineu Evangelista de Sousa, conhecido como Barão de Mauá, foi uma importante figura da industrialização brasileira. Em quais áreas ele investiu?",
         alternativas: [
             {
-                texto:"Criar uma imagem utilizando uma plataforma de design como o Paint.",
-                afirmacao:"afirmacao"
+                texto: "Ferrovias, estaleiros, bancos, navegação e iluminação pública.",
+                afirmacao: "O Barão de Mauá investiu em diferentes setores ligados à modernização do Brasil."
             },
             {
-                texto:"Criar uma imagem utilizando um gerador de imagem de IA.",
-                afirmacao:"afirmacao"
+                texto: "Apenas em plantações de café e criação de gado.",
+                afirmacao: "Os investimentos do Barão de Mauá foram mais diversificados e incluíram transportes, bancos e indústria."
             }
-            
         ]
     },
     {
-        enunciado: " Você tem um trabalho em grupo de biologia para entregar na semana seguinte, o andamento do trabalho está um pouco atrasado e uma pessoa do seu grupo decidiu fazer com ajuda de uma IA. O problema é que o trabalho está totalmente igual ao do chat. O que você faz?",
+        enunciado: "As ferrovias construídas durante o Segundo Reinado contribuíram principalmente para:",
         alternativas: [
             {
-                texto: "O chat pode ser uma tecnologia muito avançada, mas é preciso manter a atenção pois toda máquina erra, por isso revisar o trabalho e contribuir com as perspectivas pessoais é essencial.",
-                afirmacao:"afirmacao"
+                texto: "Transportar com mais rapidez o café e outros produtos até os portos.",
+                afirmacao: "As ferrovias facilitaram o transporte da produção agrícola até os portos de exportação."
             },
             {
-                texto: "Escrever comandos para o chat é uma forma de contribuir com o trabalho, por isso não é um problema utilizar o texto inteiro.",
-                afirmacao:"afirmacao"
+                texto: "Substituir completamente os portos e impedir as exportações.",
+                afirmacao: "As ferrovias não substituíram os portos; elas ajudaram a levar os produtos até eles."
             }
-            
-            
         ]
     },
+    {
+        enunciado: "Apesar de alguns avanços, a industrialização durante o governo de Dom Pedro II foi limitada. Qual foi uma das razões para essa limitação?",
+        alternativas: [
+            {
+                texto: "A economia ainda dependia muito da agricultura, da exportação do café e do trabalho escravizado.",
+                afirmacao: "A dependência do café e da escravidão dificultava a formação de um mercado de trabalho livre e industrial."
+            },
+            {
+                texto: "O Brasil já possuía uma indústria maior que a da Inglaterra.",
+                afirmacao: "Durante o Segundo Reinado, a indústria brasileira ainda era pequena quando comparada à inglesa."
+            }
+        ]
+    }
 ];
 
 let atual = 0; 
